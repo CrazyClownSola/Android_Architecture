@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".ui.ListActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/id_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        app:title="测试"
+        />
+
+    <com.sola.module.recycle.fix_container.RecyclerViewPTRFixLoadMoreContainer
+        android:id="@+id/id_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/id_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </com.sola.module.recycle.fix_container.RecyclerViewPTRFixLoadMoreContainer>
+
+
+</LinearLayout>

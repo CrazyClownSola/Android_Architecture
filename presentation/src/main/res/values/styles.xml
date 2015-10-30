@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <style name="MaterialBaseTheme" parent="Theme.AppCompat.Light">
+        <!--自定义ActionBar-->
+        <item name="android:windowActionBar">false</item>
+        <!--无标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--主色调之一，多数是ActionBar所呈现的颜色-->
+        <item name="colorPrimary">@color/material_blue_500</item>
+        <!--主色调中的深色，对应状态栏的颜色-->
+        <item name="colorPrimaryDark">@color/material_blue_700</item>
+        <!--强调色，对应控件被选中的颜色-->
+        <item name="colorAccent">@color/material_pink_200</item>
+    </style>
+
+    <style name="MaterialTheme" parent="MaterialBaseTheme">
+        <!--注意这两两个参数没有android前缀-->
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+</resources>

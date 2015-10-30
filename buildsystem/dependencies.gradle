@@ -1,0 +1,49 @@
+ext {
+    androidVersionCode = 1
+    androidVersionName = "1.0"
+    androidApplicationId = 'com.sola.android.architecture'
+
+    //Android
+    androidBuildToolsVersion = "23.0.0"
+    androidMinSdkVersion = 14
+    androidTargetSdkVersion = 23
+    androidCompileSdkVersion = 23
+
+    //libraries
+    daggerVersion = '2.0'
+    gsonVersion = '2.4'
+    supportV7Version = '23.0.0'
+    eventBusVersion = '2.4.0'
+    okHttpVersion = '2.5.0'
+    retrofitVersion = '2.0.0-beta2'
+    materialVersion = '1.0.2'
+    annotationVersion = '3.3.1'
+    rxJavaVersion = '1.0.14'
+    rxAndroidVersion = '1.0.1'
+    javaxAnnotationVersion = '10.0-b28'
+
+
+
+    appDependencies = [
+            androidannotations    : "org.androidannotations:androidannotations:${annotationVersion}",
+            androidannotations_api: "org.androidannotations:androidannotations-api:${annotationVersion}",
+            daggerCompiler        : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            dagger                : "com.google.dagger:dagger:${daggerVersion}",
+            javaxAnnotation       : "org.glassfish:javax.annotation:${javaxAnnotationVersion}",
+            rxJava                : "io.reactivex:rxjava:${rxJavaVersion}",
+            rxAndroid             : "io.reactivex:rxandroid:${rxAndroidVersion}",
+            recyclerView          : "com.android.support:recyclerview-v7:${supportV7Version}",
+            appcompat             : "com.android.support:appcompat-v7:${supportV7Version}",
+            cardview              : "com.android.support:cardview-v7:${supportV7Version}",
+            design                : "com.android.support:design:${supportV7Version}",
+            gson                  : "com.google.code.gson:gson:${gsonVersion}",
+            okHttp                : "com.squareup.okhttp:okhttp:${okHttpVersion}",
+            retrofit              : "com.squareup.retrofit:retrofit:${retrofitVersion}",
+            retrofit_gson         : "com.squareup.retrofit:converter-gson:${retrofitVersion}",
+            retrofit_adapter      : "com.squareup.retrofit:adapter-rxjava:${retrofitVersion}",
+            material              : "com.balysv:material-ripple:${materialVersion}",
+            eventBus              : "de.greenrobot:eventbus:${eventBusVersion}",
+            sola_container        : "com.github.crazyclownsola:recycler_container:1.0.3@aar"
+    ]
+
+}
