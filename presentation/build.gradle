@@ -63,6 +63,6 @@ dependencies {
     compile presentationDependencies.appcompat
     compile presentationDependencies.cardview
     compile presentationDependencies.design
-
+    // 个人撰写的关于RecyclerView的库包，还有待改进
     compile presentationDependencies.sola_container
 }

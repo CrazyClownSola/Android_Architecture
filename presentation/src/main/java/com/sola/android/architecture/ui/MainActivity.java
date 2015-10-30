@@ -3,17 +3,12 @@ package com.sola.android.architecture.ui;
 import android.widget.TextView;
 
 import com.sola.android.architecture.R;
-import com.sola.android.architecture.domain.executor.ThreadExecutor;
-import com.sola.android.architecture.internal.di.components.DaggerApplicationComponent;
-import com.sola.android.architecture.test.MyInjectClass;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.UiThread;
 import org.androidannotations.annotations.ViewById;
-
-import javax.inject.Inject;
 
 /**
  * Description:

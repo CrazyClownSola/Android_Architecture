@@ -1,12 +1,8 @@
 package com.sola.android.architecture.internal.di.modules;
 
-import android.app.Activity;
-
 import com.sola.android.architecture.domain.interactor.GetUserList;
 import com.sola.android.architecture.domain.interactor.UserCase;
 import com.sola.android.architecture.internal.di.PerActivity;
-import com.sola.android.architecture.ui.ListActivity;
-import com.sola.android.architecture.ui.ListActivity_;
 
 import javax.inject.Named;
 

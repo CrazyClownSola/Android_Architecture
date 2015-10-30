@@ -9,23 +9,17 @@ import android.support.v7.widget.Toolbar;
 import com.sola.android.architecture.R;
 import com.sola.android.architecture.adapter.BasicRecycleViewAdapter;
 import com.sola.android.architecture.domain.User;
-import com.sola.android.architecture.domain.exception.DefaultErrorBundle;
 import com.sola.android.architecture.domain.interactor.DefaultSubscriber;
-import com.sola.android.architecture.domain.interactor.UserCase;
 import com.sola.android.architecture.internal.di.HasComponent;
-import com.sola.android.architecture.internal.di.components.ApplicationComponent;
 import com.sola.android.architecture.internal.di.components.DaggerDataComponent;
 import com.sola.android.architecture.internal.di.components.DataComponent;
 import com.sola.android.architecture.internal.di.modules.ActivityModule;
 import com.sola.android.architecture.internal.di.modules.DataModule;
-import com.sola.android.architecture.mapper.UserModelDataMapper;
 import com.sola.android.architecture.view.RecycleFixHeaderView;
 import com.sola.android.architecture.view.RecycleFixHeaderView_;
 import com.sola.android.architecture.view.interactor.IRecycleListItem;
 import com.sola.module.recycle.fix_container.RecyclerViewPTRFixLoadMoreContainer;
 import com.sola.module.recycle.fix_container.RecyclerViewRefreshContainerBase;
-import com.sola.module.recycle.fix_container.tools.IRecycleLoadMoreContainer;
-import com.sola.module.recycle.fix_container.tools.IRecycleLoadMoreHandler;
 import com.sola.module.recycle.fix_container.utils.PtrDefaultHandler;
 
 import org.androidannotations.annotations.AfterViews;
@@ -34,9 +28,6 @@ import org.androidannotations.annotations.ViewById;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.inject.Inject;
-import javax.inject.Named;
 
 /**
  * author: Sola

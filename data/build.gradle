@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
-
+//调整编译环境需要用到的工具
 apply plugin: 'com.neenbedankt.android-apt'
+// java8 lambda的表达式
 apply plugin: 'me.tatarka.retrolambda'
 
 
@@ -18,18 +19,19 @@ android {
         versionName globalConfiguration.getAt("androidVersionName")
     }
 
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    //这段不能少，缺失这段可能会导致，编译是通过的，但是代码上会有error
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
+//这部分是为了代码中能适用java8的lambda的表达式而适配的配置
 retrolambda {
     jdk System.getenv("JAVA_HOME")
     javaVersion JavaVersion.VERSION_1_7

@@ -1,8 +1,5 @@
 package com.sola.android.architecture.data.repository.factory;
 
-import com.sola.android.architecture.data.net.ApiConnection;
-import com.sola.android.architecture.data.net.RestApi;
-
 import javax.inject.Inject;
 import javax.inject.Singleton;
 

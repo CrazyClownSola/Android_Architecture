@@ -89,25 +89,13 @@ public class UserModel implements IRecycleListItem {
 
     @Override
     public String toString() {
-        StringBuilder stringBuilder = new StringBuilder();
-
-        stringBuilder.append("***** User Model Details *****\n");
-        stringBuilder.append("id=" + this.getUserId() + "\n");
-        stringBuilder.append("cover url=" + this.getCoverUrl() + "\n");
-        stringBuilder.append("fullname=" + this.getFullName() + "\n");
-        stringBuilder.append("email=" + this.getEmail() + "\n");
-        stringBuilder.append("description=" + this.getDescription() + "\n");
-        stringBuilder.append("followers=" + this.getFollowers() + "\n");
-        stringBuilder.append("*******************************");
-
-        return stringBuilder.toString();
+        return "***** User Model Details *****\n" + "id=" + this.getUserId() + "\n" + "cover url=" + this.getCoverUrl() + "\n" + "fullname=" + this.getFullName() + "\n" + "email=" + this.getEmail() + "\n" + "description=" + this.getDescription() + "\n" + "followers=" + this.getFollowers() + "\n" + "*******************************";
     }
 
     @Override
     public View getView(Context context, ViewGroup parent) {
-        View v = LayoutInflater.from(context).inflate(R.layout.list_item_test_item_dto,
+        return LayoutInflater.from(context).inflate(R.layout.list_item_test_item_dto,
                 parent, false);
-        return v;
     }
 
     @Override
@@ -122,7 +110,6 @@ public class UserModel implements IRecycleListItem {
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         TextView id_text_test;
-        ImageView id_image_item_shown;
 
         public ViewHolder(
                 View v) {

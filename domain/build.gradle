@@ -1,13 +1,12 @@
 apply plugin: 'java'
 
+//虽然不是很确定这两个有什么用，但是不加这个，在run项目的时候会Crash
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
-
 
 configurations {
     provided
 }
-
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])

@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2015 Fernando Cejas Open Source Project
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -20,74 +20,64 @@ package com.sola.android.architecture.domain;
  */
 public class User {
 
-  private final int userId;
+    private final int userId;
 
-  public User(int userId) {
-    this.userId = userId;
-  }
+    public User(int userId) {
+        this.userId = userId;
+    }
 
-  private String coverUrl;
-  private String fullName;
-  private String email;
-  private String description;
-  private int followers;
+    private String coverUrl;
+    private String fullName;
+    private String email;
+    private String description;
+    private int followers;
 
-  public int getUserId() {
-    return userId;
-  }
+    public int getUserId() {
+        return userId;
+    }
 
-  public String getCoverUrl() {
-    return coverUrl;
-  }
+    public String getCoverUrl() {
+        return coverUrl;
+    }
 
-  public void setCoverUrl(String coverUrl) {
-    this.coverUrl = coverUrl;
-  }
+    public void setCoverUrl(String coverUrl) {
+        this.coverUrl = coverUrl;
+    }
 
-  public String getFullName() {
-    return fullName;
-  }
+    public String getFullName() {
+        return fullName;
+    }
 
-  public void setFullName(String fullName) {
-    this.fullName = fullName;
-  }
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
 
-  public String getEmail() {
-    return email;
-  }
+    public String getEmail() {
+        return email;
+    }
 
-  public void setEmail(String email) {
-    this.email = email;
-  }
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-  public String getDescription() {
-    return description;
-  }
+    public String getDescription() {
+        return description;
+    }
 
-  public void setDescription(String description) {
-    this.description = description;
-  }
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-  public int getFollowers() {
-    return followers;
-  }
+    public int getFollowers() {
+        return followers;
+    }
 
-  public void setFollowers(int followers) {
-    this.followers = followers;
-  }
+    public void setFollowers(int followers) {
+        this.followers = followers;
+    }
 
-  @Override public String toString() {
-    StringBuilder stringBuilder = new StringBuilder();
-
-    stringBuilder.append("***** User Details *****\n");
-    stringBuilder.append("id=" + this.getUserId() + "\n");
-    stringBuilder.append("cover url=" + this.getCoverUrl() + "\n");
-    stringBuilder.append("fullname=" + this.getFullName() + "\n");
-    stringBuilder.append("email=" + this.getEmail() + "\n");
-    stringBuilder.append("description=" + this.getDescription() + "\n");
-    stringBuilder.append("followers=" + this.getFollowers() + "\n");
-    stringBuilder.append("*******************************");
-
-    return stringBuilder.toString();
-  }
+    @Override
+    public String toString() {
+        return "***** User Details *****\n" + "id=" + this.getUserId() + "\n" + "cover url=" + this.getCoverUrl() + "\n" + "fullname=" + this.getFullName() + "\n" + "email=" + this.getEmail() + "\n" + "description=" + this.getDescription() + "\n" + "followers=" + this.getFollowers() + "\n" + "*******************************";
+    }
 }

@@ -3,7 +3,6 @@ package com.sola.android.architecture.navigator;
 import android.content.Context;
 import android.content.Intent;
 
-import com.sola.android.architecture.ui.ListActivity;
 import com.sola.android.architecture.ui.ListActivity_;
 
 import javax.inject.Inject;

@@ -4,13 +4,12 @@ import android.content.Context;
 
 import com.sola.android.architecture.MainApplication;
 import com.sola.android.architecture.data.repository.UserDataRepository;
+import com.sola.android.architecture.domain.executor.PostExecutionThread;
 import com.sola.android.architecture.domain.executor.ThreadExecutor;
 import com.sola.android.architecture.domain.repository.UserRepository;
 import com.sola.android.architecture.executor.JobExecutor;
 import com.sola.android.architecture.executor.UIThread;
-import com.sola.android.architecture.domain.executor.PostExecutionThread;
 import com.sola.android.architecture.navigator.Navigator;
-import com.sola.android.architecture.test.MyInjectClass;
 
 import javax.inject.Singleton;
 

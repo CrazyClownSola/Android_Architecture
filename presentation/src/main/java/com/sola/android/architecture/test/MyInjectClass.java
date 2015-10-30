@@ -1,11 +1,8 @@
 package com.sola.android.architecture.test;
 
 import com.sola.android.architecture.domain.executor.ThreadExecutor;
-import com.sola.android.architecture.internal.di.PerActivity;
 
 import java.util.Random;
-
-import javax.inject.Inject;
 
 /**
  * author: Sola

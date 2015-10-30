@@ -1,7 +1,7 @@
 package com.sola.android.architecture.internal.di;
 
 /**
- *
+ * 这个接口是用于，当有Activity以下的元素需要使用到上层Activity所在的组件的内容的时候，需要通过该方法去实现
  * <p>
  * author: Sola
  * 2015/10/28

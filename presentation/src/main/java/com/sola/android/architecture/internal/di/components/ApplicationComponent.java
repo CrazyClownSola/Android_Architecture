@@ -1,6 +1,5 @@
 package com.sola.android.architecture.internal.di.components;
 
-import android.app.Activity;
 import android.content.Context;
 
 import com.sola.android.architecture.domain.executor.PostExecutionThread;
@@ -12,7 +11,6 @@ import com.sola.android.architecture.ui.BaseActivity;
 import javax.inject.Singleton;
 
 import dagger.Component;
-import dagger.Provides;
 
 /**
  * author: Sola

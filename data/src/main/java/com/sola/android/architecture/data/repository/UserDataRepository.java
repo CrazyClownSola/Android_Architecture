@@ -4,7 +4,6 @@ import com.sola.android.architecture.data.entity.mapper.UserEntityDataMapper;
 import com.sola.android.architecture.data.net.ApiConnection;
 import com.sola.android.architecture.data.net.RestApi;
 import com.sola.android.architecture.data.repository.factory.UserDataFactory;
-import com.sola.android.architecture.data.repository.factory.UserDataStore;
 import com.sola.android.architecture.domain.User;
 import com.sola.android.architecture.domain.repository.UserRepository;
 
