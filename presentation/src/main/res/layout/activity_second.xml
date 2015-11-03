@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:app="http://schemas.android.com/apk/res-auto"
-              xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:orientation="vertical"
-              tools:context=".ui.ListActivity">
+              android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/id_tool_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
-        app:title="测试"
+        app:title="Presenter测试"
         />
+
+
+
 
     <com.sola.module.recycle.fix_container.PTRLMRecyclerContainer
         android:id="@+id/id_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:ptr_duration_to_close="400"
-        app:ptr_duration_to_close_header="1000"
-        app:ptr_ratio_of_header_height_to_refresh="1.4"
         >
 
         <android.support.v7.widget.RecyclerView

@@ -1,20 +1,20 @@
-package com.sola.android.architecture.navigator;
+package com.sola.android.architecture.internal.di.modules;
 
-import android.content.Context;
-import android.content.Intent;
+import com.sola.android.architecture.domain.interactor.GetUserList;
+import com.sola.android.architecture.domain.interactor.UserCase;
+import com.sola.android.architecture.internal.di.PerActivity;
 
-import com.sola.android.architecture.ui.ListActivity_;
-import com.sola.android.architecture.ui.SecondActivity_;
+import javax.inject.Named;
 
-import javax.inject.Inject;
-import javax.inject.Singleton;
+import dagger.Module;
+import dagger.Provides;
 
 /**
  * author: Sola
- * 2015/10/30
+ * 2015/11/2
  */
-@Singleton
-public class Navigator {
+@Module
+public class SecondModule {
     // ===========================================================
     // Constants
     // ===========================================================
@@ -26,12 +26,6 @@ public class Navigator {
     // ===========================================================
     // Constructors
     // ===========================================================
-
-    @Inject
-    public Navigator() {
-
-//        ObjectG
-    }
 
     // ===========================================================
     // Getter & Setter
@@ -45,30 +39,11 @@ public class Navigator {
     // Methods
     // ===========================================================
 
-    /**
-     * 切换到列表数据的Activity
-     *
-     * @param context 原有的Activity
-     */
-    public void navigatorToListActivity(Context context) {
-        if (context != null) {
-            Intent intentToContext = new Intent();
-            intentToContext.setClass(context, ListActivity_.class);
-            context.startActivity(intentToContext);
-        }
-    }
-
-    /**
-     * 切换到第二种Activity
-     *
-     * @param context 启动方
-     */
-    public void navigatorToSecondActivity(Context context) {
-        if (context != null) {
-            Intent intent = new Intent();
-            intent.setClass(context, SecondActivity_.class);
-            context.startActivity(intent);
-        }
+    @Provides
+    @PerActivity
+    @Named("UserList")
+    UserCase provideUserCase(GetUserList userList) {
+        return userList;
     }
 
     // ===========================================================

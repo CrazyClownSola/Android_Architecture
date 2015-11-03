@@ -1,23 +1,17 @@
-package com.sola.android.architecture.ui;
+package com.sola.android.architecture.exception;
 
-import android.widget.TextView;
+import android.accounts.NetworkErrorException;
+import android.content.Context;
 
 import com.sola.android.architecture.R;
-
-import org.androidannotations.annotations.AfterViews;
-import org.androidannotations.annotations.Click;
-import org.androidannotations.annotations.EActivity;
-import org.androidannotations.annotations.UiThread;
-import org.androidannotations.annotations.ViewById;
+import com.sola.android.architecture.data.exception.NetworkConnectionException;
+import com.sola.android.architecture.data.exception.UserNotFoundException;
 
 /**
- * Description:
- * <p>
  * author: Sola
- * 2015/10/28
+ * 2015/11/3
  */
-@EActivity(R.layout.activity_main)
-public class MainActivity extends BaseActivity {
+public class ErrorMessageFactory {
     // ===========================================================
     // Constants
     // ===========================================================
@@ -26,12 +20,13 @@ public class MainActivity extends BaseActivity {
     // Fields
     // ===========================================================
 
-    @ViewById
-    TextView id_test_text;
-
     // ===========================================================
     // Constructors
     // ===========================================================
+
+    private ErrorMessageFactory() {
+
+    }
 
     // ===========================================================
     // Getter & Setter
@@ -45,32 +40,21 @@ public class MainActivity extends BaseActivity {
     // Methods
     // ===========================================================
 
-    @AfterViews
-    public void afterViews() {
-        id_test_text.setText("有数据");
-//        myInjectClass.execute(() -> {
-//            try {
-//                Thread.sleep(5 * 1000);
-//            } catch (InterruptedException e) {
-//                 e.printStackTrace();
-//            }
-//            refreshView();
-//        });
-    }
-
-    @UiThread
-    public void refreshView() {
-        id_test_text.setText("");
-    }
-
-    @Click
-    public void id_btn_switch() {
-        navigator.navigatorToListActivity(this);
-    }
-
-    @Click
-    public void id_switch_second() {
-        navigator.navigatorToSecondActivity(this);
+    /**
+     * Create a String to express an error message
+     *
+     * @param context need context to get String resource
+     * @param exception the error occurred
+     * @return the expression of error
+     */
+    public static String create(Context context, Exception exception) {
+        String message = context.getString(R.string.E_A_001);
+        if (exception instanceof NetworkConnectionException) {
+            message = context.getString(R.string.E_A_002);
+        } else if (exception instanceof UserNotFoundException) {
+            message = context.getString(R.string.E_A_003);
+        }
+        return message;
     }
 
     // ===========================================================

@@ -16,8 +16,8 @@ import java.util.List;
  * author: Sola
  * 2015/10/14
  */
-public class RecycleAnimatorViewAdapter<Param extends IRecycleAnimatorListItem>
-        extends BasicRecycleViewAdapter<Param> {
+public class AnimRecyclerContainerAdapter<Param extends IRecycleAnimatorListItem>
+        extends RecyclerContainerAdapter<Param> {
 
     // ===========================================================
     // Constants
@@ -34,7 +34,7 @@ public class RecycleAnimatorViewAdapter<Param extends IRecycleAnimatorListItem>
     // Constructors
     // ===========================================================
 
-    public RecycleAnimatorViewAdapter(Context mContext, List<Param> cacheList) {
+    public AnimRecyclerContainerAdapter(Context mContext, List<Param> cacheList) {
         super(mContext, cacheList);
     }
 

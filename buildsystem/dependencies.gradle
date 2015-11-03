@@ -43,7 +43,7 @@ ext {
             retrofit_adapter      : "com.squareup.retrofit:adapter-rxjava:${retrofitVersion}",
             material              : "com.balysv:material-ripple:${materialVersion}",
             eventBus              : "de.greenrobot:eventbus:${eventBusVersion}",
-            sola_container        : "com.github.crazyclownsola:recycler_container:1.0.3@aar"
+            sola_container        : "com.github.crazyclownsola:recycler_container:1.0.4@aar"
     ]
 
 }

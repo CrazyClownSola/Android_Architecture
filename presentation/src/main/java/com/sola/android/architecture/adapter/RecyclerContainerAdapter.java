@@ -15,8 +15,8 @@ import java.util.List;
  * author: Sola
  * 2015/10/13
  */
-public class BasicRecycleViewAdapter<Param extends IRecycleListItem>
-        extends RecycleHeaderAndFooterViewAdapter {
+public class RecyclerContainerAdapter<Param extends IRecycleListItem>
+        extends RecyclerContainerBaseAdapter {
 
     // ===========================================================
     // Constants
@@ -28,11 +28,13 @@ public class BasicRecycleViewAdapter<Param extends IRecycleListItem>
 
     protected List<Param> cacheList;
 
+    private onRecyclerItemClickListener listener;
+
     // ===========================================================
     // Constructors
     // ===========================================================
 
-    public BasicRecycleViewAdapter(Context mContext, List<Param> cacheList) {
+    public RecyclerContainerAdapter(Context mContext, List<Param> cacheList) {
         super(mContext);
         refreshList(cacheList);
     }
@@ -40,6 +42,11 @@ public class BasicRecycleViewAdapter<Param extends IRecycleListItem>
     // ===========================================================
     // Getter & Setter
     // ===========================================================
+
+
+    public void setOnRecyclerItemClickListener(onRecyclerItemClickListener listener) {
+        this.listener = listener;
+    }
 
     // ===========================================================
     // Methods for/from SuperClass/Interfaces
@@ -56,7 +63,13 @@ public class BasicRecycleViewAdapter<Param extends IRecycleListItem>
 
     @Override
     protected RecyclerView.ViewHolder onCreateView(Context mContext, ViewGroup parent, int viewType) {
-        return cacheList.get(viewType).getHolder(mContext, parent);
+        Param item = cacheList.get(viewType);
+        RecyclerView.ViewHolder holder = item.getHolder(mContext, parent);
+        if (listener != null) {
+            holder.itemView.setOnClickListener(v ->
+                    listener.onItemClick(item));
+        }
+        return holder;
     }
 
     // ===========================================================
@@ -94,5 +107,9 @@ public class BasicRecycleViewAdapter<Param extends IRecycleListItem>
     // ===========================================================
     // Inner and Anonymous Classes
     // ===========================================================
+
+    public interface onRecyclerItemClickListener {
+        void onItemClick(IRecycleListItem param);
+    }
 
 }

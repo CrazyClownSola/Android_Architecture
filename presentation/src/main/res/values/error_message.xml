@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    //当异常发生的时候的友好提示
+
+    <string name="E_A_001">发生了一个应用内部异常</string>
+    <string name="E_A_002">网络连接异常，请检查网络状态</string>
+    <string name="E_A_003">数据获取异常</string>
+    <string name="E_A_004"> </string>
+    <string name="E_A_005"> </string>
+    <string name="E_A_006"> </string>
+    <string name="E_A_007"> </string>
+    <string name="E_A_008"> </string>
+    <string name="E_A_009"> </string>
+
+</resources>

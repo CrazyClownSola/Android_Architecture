@@ -13,7 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.sola.android.architecture.R;
-import com.sola.module.recycle.fix_container.RecyclerViewRefreshContainerBase;
+import com.sola.module.recycle.fix_container.RecyclerContainerBase;
 import com.sola.module.recycle.fix_container.tools.IPullToRefreshUIHandler;
 
 import org.androidannotations.annotations.EViewGroup;
@@ -74,17 +74,17 @@ public class RecycleFixHeaderView extends LinearLayout implements IPullToRefresh
     // Methods for/from SuperClass/Interfaces
     // ===========================================================
     @Override
-    public void onUIReset(RecyclerViewRefreshContainerBase frame) {
+    public void onUIReset(RecyclerContainerBase frame) {
     }
 
     @Override
-    public void onUIRefreshPrepare(RecyclerViewRefreshContainerBase frame) {
+    public void onUIRefreshPrepare(RecyclerContainerBase frame) {
         id_image_loading.setVisibility(View.INVISIBLE);
         id_text_progress_message.setText("下拉即可刷新");
     }
 
     @Override
-    public void onUIRefreshBegin(RecyclerViewRefreshContainerBase frame) {
+    public void onUIRefreshBegin(RecyclerContainerBase frame) {
         id_image_loading.setVisibility(View.VISIBLE);
         id_text_progress_message.setText("正在加载，请稍候");
 //        set.start();
@@ -93,7 +93,7 @@ public class RecycleFixHeaderView extends LinearLayout implements IPullToRefresh
     }
 
     @Override
-    public void onUIRefreshComplete(RecyclerViewRefreshContainerBase frame) {
+    public void onUIRefreshComplete(RecyclerContainerBase frame) {
         id_image_loading.setVisibility(View.INVISIBLE);
         id_text_progress_message.setText("更新完毕");
 //        set.cancel();
@@ -101,7 +101,7 @@ public class RecycleFixHeaderView extends LinearLayout implements IPullToRefresh
     }
 
     @Override
-    public void onUIPositionChange(RecyclerViewRefreshContainerBase frame, boolean isUnderTouch, byte status, int currentPos, int lastPos, int offsetHeight) {
+    public void onUIPositionChange(RecyclerContainerBase frame, boolean isUnderTouch, byte status, int currentPos, int lastPos, int offsetHeight) {
 
         if (currentPos < offsetHeight && lastPos >= offsetHeight) {
             if (isUnderTouch && status == 2) {
@@ -116,12 +116,12 @@ public class RecycleFixHeaderView extends LinearLayout implements IPullToRefresh
     // ===========================================================
     // Methods
     // ===========================================================
-    private void crossRotateLineFromBottomUnderTouch(RecyclerViewRefreshContainerBase frame) {
+    private void crossRotateLineFromBottomUnderTouch(RecyclerContainerBase frame) {
         id_image_loading.setVisibility(View.INVISIBLE);
         id_text_progress_message.setText("往下拉");
     }
 
-    private void crossRotateLineFromTopUnderTouch(RecyclerViewRefreshContainerBase frame) {
+    private void crossRotateLineFromTopUnderTouch(RecyclerContainerBase frame) {
         id_image_loading.setVisibility(View.INVISIBLE);
         id_text_progress_message.setText("松开即可更新");
     }

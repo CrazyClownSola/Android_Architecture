@@ -16,7 +16,7 @@ import java.util.List;
  * author: Sola
  * 2015/10/13
  */
-public abstract class RecycleHeaderAndFooterViewAdapter
+public abstract class RecyclerContainerBaseAdapter
         extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
 
@@ -38,7 +38,7 @@ public abstract class RecycleHeaderAndFooterViewAdapter
     // ===========================================================
     // Constructors
     // ===========================================================
-    public RecycleHeaderAndFooterViewAdapter(Context mContext) {
+    public RecyclerContainerBaseAdapter(Context mContext) {
         this.mContext = mContext;
         headers = new ArrayList<>();
         footers = new ArrayList<>();

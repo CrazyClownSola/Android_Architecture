@@ -28,6 +28,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/MaterialTheme"
             />
+        <activity
+            android:name=".ui.SecondActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/MaterialTheme"
+            />
 
     </application>
 

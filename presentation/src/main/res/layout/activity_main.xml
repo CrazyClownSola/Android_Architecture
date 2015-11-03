@@ -14,8 +14,22 @@
         android:id="@+id/id_btn_switch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="切换"
+        android:text="纯界面"
         />
+
+    <Button
+        android:id="@+id/id_switch_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="调整成Presenter界面"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fdsjofasdijgnaijgnasdifnasgn asdojovnasdv asivnosnanoangangioag\ngauenvn sidjnvijdvijsdf visdffiv visdf idf idf idfidfsivb vjd fjvh sdfj vsdnjf vjsdf jnj gje j  erb fdjvdf sjn s dfjv sdfln vsdnjlf jnvsdf vnjdsf jvn sfjn vsnjef vnje rjnenjj ernj enj njfenj fnj jnjf nkl fjv nksd nksdf snld nsdf njsdf njdf ljdfn"
+        />
+
 
 
 </LinearLayout>

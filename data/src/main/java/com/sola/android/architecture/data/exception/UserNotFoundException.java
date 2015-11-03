@@ -1,20 +1,10 @@
-package com.sola.android.architecture.navigator;
-
-import android.content.Context;
-import android.content.Intent;
-
-import com.sola.android.architecture.ui.ListActivity_;
-import com.sola.android.architecture.ui.SecondActivity_;
-
-import javax.inject.Inject;
-import javax.inject.Singleton;
+package com.sola.android.architecture.data.exception;
 
 /**
  * author: Sola
- * 2015/10/30
+ * 2015/11/3
  */
-@Singleton
-public class Navigator {
+public class UserNotFoundException extends Exception {
     // ===========================================================
     // Constants
     // ===========================================================
@@ -27,11 +17,21 @@ public class Navigator {
     // Constructors
     // ===========================================================
 
-    @Inject
-    public Navigator() {
-
-//        ObjectG
+    public UserNotFoundException() {
     }
+
+    public UserNotFoundException(String detailMessage) {
+        super(detailMessage);
+    }
+
+    public UserNotFoundException(String detailMessage, Throwable throwable) {
+        super(detailMessage, throwable);
+    }
+
+    public UserNotFoundException(Throwable throwable) {
+        super(throwable);
+    }
+
 
     // ===========================================================
     // Getter & Setter
@@ -44,32 +44,6 @@ public class Navigator {
     // ===========================================================
     // Methods
     // ===========================================================
-
-    /**
-     * 切换到列表数据的Activity
-     *
-     * @param context 原有的Activity
-     */
-    public void navigatorToListActivity(Context context) {
-        if (context != null) {
-            Intent intentToContext = new Intent();
-            intentToContext.setClass(context, ListActivity_.class);
-            context.startActivity(intentToContext);
-        }
-    }
-
-    /**
-     * 切换到第二种Activity
-     *
-     * @param context 启动方
-     */
-    public void navigatorToSecondActivity(Context context) {
-        if (context != null) {
-            Intent intent = new Intent();
-            intent.setClass(context, SecondActivity_.class);
-            context.startActivity(intent);
-        }
-    }
 
     // ===========================================================
     // Inner and Anonymous Classes
