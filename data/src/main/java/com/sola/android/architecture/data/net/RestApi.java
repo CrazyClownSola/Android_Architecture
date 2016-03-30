@@ -4,6 +4,7 @@ import com.sola.android.architecture.data.entity.UserEntity;
 
 import java.util.List;
 
+import retrofit.http.Field;
 import retrofit.http.GET;
 import retrofit.http.Headers;
 import rx.Observable;

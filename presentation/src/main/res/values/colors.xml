@@ -2,13 +2,5 @@
 <resources>
 
 
-    <color name="material_blue_500">#5677fc</color>
-    <color name="material_blue_100">#d0d9ff</color>
-    <color name="material_blue_700">#455ede</color>
-
-
-    <color name="material_pink_100">#f8bbd0</color>
-    <color name="material_pink_200">#f48fb1</color>
-    <color name="material_pink_400">#ec407a</color>
 
 </resources>

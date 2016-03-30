@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="material_blue_500">#5677fc</color>
+    <color name="material_blue_100">#d0d9ff</color>
+    <color name="material_blue_700">#455ede</color>
+
+
+    <color name="material_red_500">#e51c23</color>
+    <color name="material_red_50">#fde0dc</color>
+    <color name="material_red_100">#f9bdbb</color>
+    <color name="material_red_200">#f69988</color>
+    <color name="material_red_300">#f36c60</color>
+    <color name="material_red_400">#e84e40</color>
+    <color name="material_red_600">#dd191d</color>
+    <color name="material_red_700">#d01716</color>
+    <color name="material_red_800">#c41411</color>
+    <color name="material_red_900">#b0120a</color>
+    <color name="material_red_A100">#ff7997</color>
+    <color name="material_red_A200">#ff5177</color>
+    <color name="material_red_A400">#ff2d6f</color>
+    <color name="material_red_A700">#e00032</color>
+
+
+    <color name="material_pink_50">#fce4ec</color>
+    <color name="material_pink_100">#f8bbd0</color>
+    <color name="material_pink_200">#f48fb1</color>
+    <color name="material_pink_300">#f06292</color>
+    <color name="material_pink_400">#ec407a</color>
+    <color name="material_pink_500">#e91e63</color>
+    <color name="material_pink_600">#d81b60</color>
+    <color name="material_pink_700">#c2185b</color>
+    <color name="material_pink_800">#ad1457</color>
+    <color name="material_pink_900">#880e4f</color>
+    <color name="material_pink_A100">#ff80ab</color>
+    <color name="material_pink_A200">#ff4081</color>
+    <color name="material_pink_A400">#f50057</color>
+    <color name="material_pink_A700">#c51162</color>
+
+
+</resources>

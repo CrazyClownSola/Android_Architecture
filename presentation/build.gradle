@@ -48,6 +48,8 @@ dependencies {
     compile project(':domain')
     compile project(':data')
     def presentationDependencies = rootProject.ext.appDependencies
+
+
     apt presentationDependencies.daggerCompiler
     compile presentationDependencies.dagger
     provided presentationDependencies.javaxAnnotation

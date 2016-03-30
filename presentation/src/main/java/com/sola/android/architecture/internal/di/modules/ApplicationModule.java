@@ -64,26 +64,26 @@ public class ApplicationModule {
     /**
      * 提供给RxJava使用的Android的主线程
      *
-     * @param thread 主线程实例
+//     * @param thread 主线程实例
      * @return 返回实例
      */
     @Provides
     @Singleton
-    PostExecutionThread provideExecutionThread(UIThread thread) {
-        return thread;
+    PostExecutionThread provideExecutionThread() {
+        return new UIThread();
     }
 
 
     /**
      * 提供给RxJava使用的线程池
      *
-     * @param executor 自定义的线程池的实例
+
      * @return 实例
      */
     @Provides
     @Singleton
-    ThreadExecutor provideThreadExecutor(JobExecutor executor) {
-        return executor;
+    ThreadExecutor provideThreadExecutor() {
+        return new JobExecutor();
     }
 
     @Provides

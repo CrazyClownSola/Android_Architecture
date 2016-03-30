@@ -30,6 +30,8 @@ import org.androidannotations.annotations.ViewById;
 import java.util.ArrayList;
 import java.util.List;
 
+import rx.Observable;
+
 /**
  * author: Sola
  * 2015/10/30

@@ -53,6 +53,10 @@ public abstract class UserCase {
 
     @SuppressWarnings("unchecked")
     public void execute(Subscriber UseCaseSubscriber) {
+//        Observable o ;
+//        o.subscribeOn(Schedulers.from(threadExecutor))
+//                .subscribe();
+//
         this.subscription = this.buildUseCaseObservable()
                 .subscribeOn(Schedulers.from(threadExecutor))
                 .observeOn(postExecutionThread.getScheduler())
